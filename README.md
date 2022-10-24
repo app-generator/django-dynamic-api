@@ -42,11 +42,12 @@ INSTALLED_APPS = [
 
 <br />
 
-> **Step #3** - `Register the model` in `core/settings.py` (API_GENERATOR section)
+> **Step #3** - `Register the model` in `core/settings.py` (DYNAMIC_API section)
 
 This sample code assumes that `app1` exists and model `Book` is defined and migrated.
 
 ```python
+
 DYNAMIC_API = {
     # pattern: 
     # API_SLUG -> Import_PATH 
@@ -59,6 +60,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ],
 }
+
 ```
 
 <br />
