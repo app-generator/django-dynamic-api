@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.2] 2022-10-24
+### Improvements
+
+- DOCS Update
+- Added [Dynamic API](https://www.youtube.com/watch?v=nPQMUafTrNY) `video presentation`
+
 ## [1.0.1] 2022-10-24
 ### Improvements
 
