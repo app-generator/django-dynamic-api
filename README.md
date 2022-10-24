@@ -4,7 +4,7 @@ Simple tool that **Generates Secure APIs** on top of `DRF` with minimum effort -
 
 <br />
 
-> `Dynamic API Features` 
+> `Dynamic API Features` - see [video](https://www.youtube.com/watch?v=nPQMUafTrNY) presentation 
 
 - `API engine` provided by `DRF`
 - `Minimal Configuration` (single line in config for each model)
