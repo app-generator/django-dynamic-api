@@ -1,3 +1,8 @@
+# -*- encoding: utf-8 -*-
+"""
+Copyright (c) 2019 - present AppSeed.us
+"""
+
 from django.http import Http404
 
 from django.contrib.auth.decorators import login_required
@@ -57,7 +62,7 @@ class DynamicAPI(APIView):
             'data': output,
             'success': True
             }, status=200)
-            
+
     # CREATE : POST api/model/
     #@check_permission
     def post(self, request, **kwargs):
@@ -81,7 +86,6 @@ class DynamicAPI(APIView):
         }, status=200)
 
     # UPDATE : PUT api/model/id/
-    #@method_decorator(login_required, name='dispatch')
     #@check_permission
     def put(self, request, **kwargs):
         try:
@@ -112,7 +116,6 @@ class DynamicAPI(APIView):
             }, status=200)
 
     # DELETE : DELETE api/model/id/
-    #@method_decorator(login_required, name='dispatch')
     #@check_permission
     def delete(self, request, **kwargs):
         try:

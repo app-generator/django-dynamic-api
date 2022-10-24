@@ -3,7 +3,7 @@
 Copyright (c) 2019 - present AppSeed.us
 """
 
-import datetime, sys, inspect
+import datetime, sys, inspect, importlib
 
 from functools import wraps
 
@@ -32,13 +32,14 @@ class Utils:
 
     @staticmethod
     def model_name_to_class(name: str):
-        all_classes = inspect.getmembers(sys.modules[__name__], inspect.isclass)
-        for cls in all_classes:
-            if cls[0] == name:
-                return cls[1]
-                
-        # we are confident that never returns None
-        return None
+
+        model_name    = name.split('.')[-1]
+        model_import  = name.replace('.'+model_name, '') 
+
+        module = importlib.import_module(model_import)
+        cls = getattr(module, model_name)
+
+        return cls 
 
 def check_permission(function):
     @wraps(function)

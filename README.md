@@ -12,6 +12,10 @@ Simple tool that **Generates Secure APIs** on top of `DRF` with minimum effort -
 
 <br />
 
+![Django Dynamic API - DRF Interface (open-source tool).](https://user-images.githubusercontent.com/51070104/197181145-f7458df7-23c3-4c14-bcb1-8e168882a104.jpg)
+
+<br />
+
 ## How to use it
 
 <br />
@@ -82,10 +86,26 @@ urlpatterns = [
 
 <br />
 
-> **Step #6** - `Use API` 
+> **Step #6** - `Update routing`, include `DRF` JWT authentication  
+
+```python
+from django.contrib import admin
+from rest_framework.authtoken.views import obtain_auth_token # <-- NEW
+
+urlpatterns = [
+    path("admin/", admin.site.urls),     
+    path("api/", include("api.urls")),                       # <-- Added in the previous step
+    path('login/jwt/', view=obtain_auth_token),              # <-- NEW
+]    
+```    
+
+<br />
+
+> **Step #7** - `Use API` 
 
 If the managed model is `Books`, the API interface is `/api/books/` and all CRUD methods are available. 
 
+> Note: for mutating requests, the `JWT Token` is provided by `http://localhost:8000/login/jwt/` route (the user should exist). 
 
 <br />
 
