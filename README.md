@@ -1,4 +1,4 @@
-# Django Dynamic API
+# [Django Dynamic API](https://github.com/app-generator/django-dynamic-api)
 
 Simple tool that **Generates Secure APIs** on top of `DRF` with minimum effort - actively supported by [AppSeed](https://appseed.us/).
 
@@ -102,4 +102,4 @@ If the managed model is `Books`, the API interface is `/api/books/` and all CRUD
 <br />
 
 ---
-Django Dynamic API - Open-source library provided by **[AppSeed](https://appseed.us/)**
+[Django Dynamic API](https://github.com/app-generator/django-dynamic-api) - Open-source library provided by **[AppSeed](https://appseed.us/)**
