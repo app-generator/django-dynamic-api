@@ -76,11 +76,11 @@ $ python manage.py migrate
 
 ```python
 from django.contrib import admin
-from django.urls import path, include     # <-- NEW: 'include` directive added
+from django.urls import path, include         # <-- NEW: 'include` directive added
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/",   include("api.urls")),  # <-- NEW: API routing rules
+    path('', include('django_dyn_api.urls')),  # <-- NEW: API routing rules
 ]    
 ```    
 
@@ -94,7 +94,8 @@ from rest_framework.authtoken.views import obtain_auth_token # <-- NEW
 
 urlpatterns = [
     path("admin/", admin.site.urls),     
-    path("api/", include("api.urls")),                       # <-- Added in the previous step
+
+    path('', include('django_dyn_api.urls')),                # <-- Added in the previous step
     path('login/jwt/', view=obtain_auth_token),              # <-- NEW
 ]    
 ```    
