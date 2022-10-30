@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.3] 2022-10-30
+### Improvements
+
+- `DOCS` Update
+- Remove `settings` module hard coding
+  - Now use `getattr()` to bind the configuration  
+
 ## [1.0.2] 2022-10-24
 ### Improvements
 
