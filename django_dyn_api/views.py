@@ -11,7 +11,15 @@ from django.utils.decorators import method_decorator
 from rest_framework.generics import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from core.settings import DYNAMIC_API
+
+from django.conf import settings
+
+DYNAMIC_API = {}
+
+try:
+    DYNAMIC_API = getattr(settings, 'DYNAMIC_API') 
+except:     
+    pass 
 
 from .helpers import Utils 
 
